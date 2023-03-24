@@ -1,1 +1,85 @@
-<svg id="Labels" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.45 15.45"><title>icon-plugin-type</title><polygon points="14.47 3 11.52 5.94 9.51 3.93 12.46 0.99 11.47 0 8.53 2.95 7.05 1.48 2.62 5.92 2.62 9.38 3.52 10.29 0 13.81 1.64 15.45 5.17 11.93 6.08 12.84 9.53 12.84 13.97 8.4 12.51 6.93 15.45 3.98 14.47 3"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="785.24304"
+   height="972.09003"
+   viewBox="0 0 785.24304 972.09003"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="/var/folders/fj/wl1mp6xn53z46_bhh660d8540000gn/T/ink_ext_XXXXXX.svgVWYX11"
+   inkscape:export-filename="bitmap.svg"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview522"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="0.25"
+     inkscape:cx="30.0"
+     inkscape:cy="30.0"
+     inkscape:window-width="1390"
+     inkscape:window-height="958"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid528" />
+  </sodipodi:namedview>
+  <defs
+     id="defs517">
+    <linearGradient
+       id="a"
+       gradientTransform="matrix(6.155987,18.597909,-18.597909,6.155987,97.980456,382.72179)"
+       gradientUnits="userSpaceOnUse"
+       x1="0"
+       x2="1"
+       y1="0"
+       y2="0">
+      <stop
+         offset="0"
+         stop-color="#0052cc"
+         id="stop364" />
+      <stop
+         offset="1"
+         stop-color="#2684ff"
+         id="stop366" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(511.4032,-185.6613)">
+    <g
+       id="g563"
+       transform="matrix(18.700456,0,0,18.071572,-1885.404,-6307.778)"
+       inkscape:export-filename="jsd.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         d="m 98.562744,380.5617 14.633516,0.0568 c 1.24608,0.006 2.26851,1.03308 2.26851,2.27916 0,0.49418 -0.16046,0.97557 -0.45796,1.37034 l -21.598811,28.84102 c -3.87529,-2.89405 -6.162264,-7.45663 -6.162264,-12.29329 0,-3.31011 1.07071,-6.53361 3.052376,-9.18482 z"
+         fill="url(#a)"
+         id="path401"
+         style="fill:url(#a);fill-rule:nonzero;stroke-width:0.71002" />
+      <path
+         d="m 90.291011,391.63091 -14.54831,-0.0923 c -1.246085,-0.006 -2.268514,-1.03308 -2.268514,-2.27917 0,-0.49417 0.160465,-0.97556 0.457963,-1.37034 l 21.385802,-28.5712 c 3.87529,2.89404 6.162268,7.45663 6.162268,12.29329 0,3.31011 -1.07071,6.5336 -3.05238,9.18482 z"
+         fill="#2684ff"
+         id="path403"
+         style="fill-rule:nonzero;stroke-width:0.71002" />
+    </g>
+  </g>
+</svg>
