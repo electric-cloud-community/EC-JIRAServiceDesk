@@ -1,0 +1,66 @@
+apply plugin: 'groovy'
+
+repositories{
+    mavenCentral()
+    flatDir {
+        dirs 'agent/deps/libs'
+    }
+}
+
+ext {
+    lombokVersion = "1.18.24"
+    jacksonVersion = "2.14.0-rc1"
+    springVersion = "5.3.23"
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.13'
+
+    implementation 'com.electriccloud.plugins:flowpdf-groovy-lib:1.3.0.0'
+
+    implementation 'org.jetbrains:annotations:23.1.0'
+
+    implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion"
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+
+    implementation "org.springframework:spring-web:$springVersion"
+
+//    implementation 'com.electriccloud:commander-api-bindings:10.1.0.145850'
+}
+
+
+sourceSets {
+    main {
+        groovy {
+            srcDirs = ['dsl/properties/groovy/lib']
+        }
+    }
+}
+
+
+// Use this task to include third-party dependencies into to agent folder
+task copyDependencies(type: Copy) {
+    outputs.upToDateWhen { false }
+
+    from configurations.runtimeClasspath {
+        // Dependencies already included into the COMMANDER_HOME/utils/langs
+        exclude group: 'org.codehaus.groovy', module: 'groovy-all'
+        exclude group: "commons-lang", module: 'commons-lang'
+        exclude group: "commons-codec", module: 'commons-codec'
+        exclude group: "commons-beanutils", module: 'commons-beanutils'
+        exclude group: "commons-collections", module: 'commons-collections'
+        exclude group: "com.electriccloud.plugins", module: 'flowpdf-groovy-lib'
+        exclude group: "com.electriccloud", module: 'commander-api-bindings'
+        exclude group: 'org.apache.httpcomponents', module: 'httpclient'
+        exclude group: 'xml-resolver', module: 'xml-resolver'
+        exclude group: 'xml-apis', module: 'xml-apis'
+        exclude group: 'xerces', module: 'xercesImpl'
+        exclude group: 'net.sf.ezmorph', module: 'ezmorph'
+        exclude group: 'net.sourceforge.nekohtml', module: 'nekohtml'
+        exclude group: 'net.sf.json-lib', module: 'json-lib'
+        exclude group: 'org.codehaus.groovy.modules.http-builder', module: 'http-builder'
+    }
+    into 'agent/deps/libs'
+}

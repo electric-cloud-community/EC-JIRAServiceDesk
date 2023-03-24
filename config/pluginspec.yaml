@@ -1,0 +1,135 @@
+pluginInfo:
+  # This is default sample specification
+  # Feel free to change it
+  # Call pdk showdoc pluginspec to see the list of available fields and their description
+  pluginName: 'EC-JIRAServiceDesk'
+  version: '1.0.0'
+  description: 'JIRA Service Desk api integration'
+  author: 'Shaohua Wen swen@cloudbees.com'
+  supportUrl: 'none'
+  category: 'Resource Management'
+  shell: 'ec-groovy'
+
+# REST-backed plugin configuration
+configuration:
+  checkConnection: true
+  restConfigInfo:
+    endpointLabel: 'My REST Endpoint'
+    checkConnectionUri: '/rest/servicedeskapi/servicedesk'
+    headers:
+      Accept: 'application/json'
+    authSchemes:
+      bearer:
+        passwordLabel: 'Bearer token'
+        description: 'Token to connect to...'
+      basic:
+        userNameLabel: 'Username'
+        passwordLabel: 'Password'
+        description: 'Username and password to connect to ...'
+  hasProxySupport: true
+  hasDebugLevel: true
+
+restClient:
+  userAgent: My REST Client
+  endpoints:
+  -
+    # HTTP method to use, e.g. GET/POST/PUT
+    httpMethod: POST
+    # Method name in the generated REST client
+    methodName: attachTemporaryFile
+    # URL or URL template to use in the REST call. Use {{ parameter }} to add a procedure parameter to the template
+    url: /rest/servicedeskapi/servicedesk/{{serviceDeskId}}/attachTemporaryFile
+    # Headers to add into the REST request. Headers do support {{ }} parameters.
+    headers:
+      X-ExperimentalApi: opt-in
+      X-Atlassian-Token: no-check
+    # Content type for the REST call.
+    contentType: multipart/form-data
+    # List of REST parameters
+    # Repeat this section for each object
+    parameters:
+    -
+      # Where this parameter goes. Available values: path, query, body, raw body
+      # If set to path, the parameter needs to be placed into uri with {{ }} notation.
+      # If set to query, the parameter will be passed to the request query.
+      # If set to body, the parameter will be put in a map in form <paramName> = value and the map will be encoded in JSON.
+      # If set to 'raw body', the parameter will be passed in the body of the request as is - raw JSON is expected here.
+      #
+      # If there are parameters with body and raw body placement, they will be merged into a single map.
+      in: path
+      # Parameter name. If the parameter is attached to a property and the parameter name is not provided, it will take the property name.
+      name: attachmentPath
+    -
+      in: path
+      name: serviceDeskId
+  # Language for the REST client generation. If not set explicitly, will be deduced from the procedures.
+  shell: groovy
+
+procedures:
+-
+  name: 'Create Service Desk Request'
+  description: 'This procedure Create a Service Desk Request'
+  hasConfig: true
+  shell: 'ec-groovy'
+  parameters:
+  -
+    name: serviceDeskId
+    documentation: The Id of the Service Desk
+    required: true
+    type: entry
+    label: Service Desk Id
+    restParamInfo:
+      in: body
+  -
+    name: requestTypeId
+    documentation: The Type Id of the Request
+    required: true
+    type: entry
+    label: Request Type Id
+    restParamInfo:
+      in: body
+  -
+    name: requestFieldValues
+    documentation: |
+      The field values of the Request, in json format, example:
+        {
+          "customfield_22416": "33333333",
+          "customfield_20400": "444444",
+          "summary": "Request JSD help via REST",
+          "description": "I need a new mouse for my Mac",
+          "customfield_20402": { "value" : "Enterprise Technology", "child": {"value" : "Compliance IT"}},
+          "customfield_22410": [{"value" : "Asia Pacific"}]
+        }
+    required: true
+    value:  '{ "summary": "", "description": "" }'
+    type: textarea
+    label: Request Field Values
+    restParamInfo:
+      in: body
+  -
+    name: attachmentPath
+    documentation: The path of the attached file
+    required: false
+    type: entry
+    label: Attachment path
+  -
+    name: resultPropertyPath
+    documentation: The path of the result property
+    required: false
+    type: entry
+    label: Result Property path
+    value: /myJob/result
+  outputParameters:
+  -
+    # Output parameter name
+    name: result
+    # Output parameter description
+    description: rest call result
+    # Set to true if this parameter participates in the REST call. The REST request result will be saved in this output parameter.
+    isRestOutputParam: true
+  # Connects REST endpoint to the plugin procedure
+  restProcedureInfo:
+    url: '/rest/servicedeskapi/request'
+    methodName: 'createRequest'
+    contentType: application/json
+    httpMethod: 'POST'
