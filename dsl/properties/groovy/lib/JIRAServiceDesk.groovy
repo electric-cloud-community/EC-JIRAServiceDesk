@@ -56,6 +56,7 @@ class JIRAServiceDesk extends FlowPlugin {
         //step result output parameters
         sr.setOutputParameter("result", response)
         sr.apply()
+        log.info "Create Service Desk Request step finished"
     }
 /**
      * This method returns REST Client object
