@@ -3,7 +3,7 @@ pluginInfo:
   # Feel free to change it
   # Call pdk showdoc pluginspec to see the list of available fields and their description
   pluginName: 'EC-JIRAServiceDesk'
-  version: '1.0.0'
+  version: '1.0.1'
   description: 'JIRA Service Desk api integration'
   author: 'Shaohua Wen swen@cloudbees.com'
   supportUrl: 'none'
