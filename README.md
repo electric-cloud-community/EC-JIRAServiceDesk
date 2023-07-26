@@ -1,37 +1,47 @@
 EC-JIRAServiceDesk Plugin
 
 EC-JIRAServiceDesk
-========
+---
 
 
 Plugin version 1.0.1
 
-Revised on Wed Jul 26 10:17:18 ICT 2023
+Revised on Wed Jul 26 11:32:01 ICT 2023
 
 
 * * *
 
 
 Contents
-========
+---
 
 
 *   [Overview](#overview)
+*   [Supported Versions](#supported-versions)
 *   [Plugin Configurations](#plugin-configurations)
 *   [Plugin Procedures](#plugin-procedures)
-
 *   [Create Service Desk Request](#create-service-desk-request)
+*   [Use Cases](#use-cases)
+*   [Known Issues](#known-issues)
+*   [Change Log](#change-log)
 
 ## Overview
-========
+---
 
 JIRA Service Desk api integration
 
 
 
+## Supported Versions
+---
+
+*   5.4
+
+
+
 
 ## Plugin Configurations
-=====================
+---
 
 Plugin configurations are sets of parameters that can be applied across some, or all, of the plugin procedures. They can reduce the repetition of common values, create predefined parameter sets, and securely store credentials. Each configuration is given a unique name that is entered in the designated parameter for the plugin procedures that use them.  
 
@@ -58,7 +68,7 @@ Configuration Parameters
 | Debug Level | This option sets debug level for logs. If info is selected, only summary information will be shown, for debug, there will be some debug information and for trace the whole requests and responses will be shown. |
 
 ## Plugin Procedures
-=================
+---
 
 **IMPORTANT** Note that the names of Required parameters are marked in **_bold italics_** in the parameter description table for each procedure.
 
@@ -87,3 +97,31 @@ This procedure Create a Service Desk Request
 | Parameter | Description |
 | --- | --- |
 | result | rest call result |
+
+
+
+## Use Cases
+---
+
+### Create a JSD ticket and attach a file
+
+* Create a pipeline task
+* Set the file path parameter
+
+![Example Task](htdocs/images/createJsdTicketWithFile.png)
+
+
+
+
+## Known Issues
+---
+
+*   No issues found yet
+
+
+
+## Change Log
+---
+
+*   1.0.1 - fixed libs with security issues.
+*   1.0 - Initial release with createServiceDeskRequest implemented

@@ -1,0 +1,11 @@
+knownIssues:
+  - No issues found yet
+supportedVersions:
+  - 5.4
+changelogs:
+  - 1.0.1
+    - fixed libs with security issues.
+  - 1.0
+    - Initial release with createServiceDeskRequest implemented 
+useCases:
+  - useCase1.md
