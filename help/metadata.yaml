@@ -8,4 +8,4 @@ changelogs:
   - 1.0
     - Initial release with createServiceDeskRequest implemented 
 useCases:
-  - useCase1.md
+  Create a JSD ticket with attached file: useCase1.md

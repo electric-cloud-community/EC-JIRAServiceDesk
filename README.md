@@ -6,7 +6,7 @@ EC-JIRAServiceDesk
 
 Plugin version 1.0.1
 
-Revised on Wed Jul 26 11:46:02 ICT 2023
+Revised on Wed Jul 26 13:35:53 ICT 2023
 
 
 * * *
@@ -22,6 +22,7 @@ Contents
 *   [Plugin Procedures](#plugin-procedures)
     *   [Create Service Desk Request](#create-service-desk-request)
 *   [Use Cases](#use-cases)
+    *   [Create a JSD ticket with attached file](#create-a-jsd-ticket-with-attached-file)
 *   [Known Issues](#known-issues)
 *   [Change Log](#change-log)
 
@@ -103,7 +104,7 @@ This procedure Create a Service Desk Request
 ## Use Cases
 ---
 
-### Create a JSD ticket and attach a file
+### Create a JSD ticket with attached file
 
 * Create a pipeline task
 

@@ -1,4 +1,4 @@
-### Create a JSD ticket and attach a file
+### Create a JSD ticket with attached file
 
 * Create a pipeline task
 
