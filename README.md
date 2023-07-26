@@ -6,7 +6,7 @@ EC-JIRAServiceDesk
 
 Plugin version 1.0.1
 
-Revised on Wed Jul 26 11:38:58 ICT 2023
+Revised on Wed Jul 26 11:46:02 ICT 2023
 
 
 * * *
@@ -20,7 +20,7 @@ Contents
 *   [Supported Versions](#supported-versions)
 *   [Plugin Configurations](#plugin-configurations)
 *   [Plugin Procedures](#plugin-procedures)
-*   [Create Service Desk Request](#create-service-desk-request)
+    *   [Create Service Desk Request](#create-service-desk-request)
 *   [Use Cases](#use-cases)
 *   [Known Issues](#known-issues)
 *   [Change Log](#change-log)
