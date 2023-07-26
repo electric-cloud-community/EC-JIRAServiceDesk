@@ -108,11 +108,11 @@ This procedure Create a Service Desk Request
 
 * Create a pipeline task
 
-![Task step 1](:htdocs/images/createJsdTicketWithFileStep1.png)
+![Task step 1](htdocs/images/createJsdTicketWithFileStep1.png)
 
 * Set the file path parameter
 
-![Task step 2](:htdocs/images/createJsdTicketWithFileStep2.png)
+![Task step 2](htdocs/images/createJsdTicketWithFileStep2.png)
 
 
 
