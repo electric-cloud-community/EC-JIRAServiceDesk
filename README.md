@@ -6,7 +6,7 @@ EC-JIRAServiceDesk
 
 Plugin version 1.0.1
 
-Revised on Wed Jul 26 13:35:53 ICT 2023
+Revised on Wed Jul 26 15:02:46 ICT 2023
 
 
 * * *

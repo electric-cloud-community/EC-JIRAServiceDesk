@@ -9,4 +9,4 @@ changelogs:
     - Initial release with createServiceDeskRequest implemented 
 useCases:
   - name: Create a JSD ticket with attached file
-    file: useCase1.md
+    file: createJSDTicketWithAttachedFile.md
