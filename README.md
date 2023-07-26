@@ -6,7 +6,7 @@ EC-JIRAServiceDesk
 
 Plugin version 1.0.1
 
-Revised on Wed Jul 26 11:32:01 ICT 2023
+Revised on Wed Jul 26 11:36:20 ICT 2023
 
 
 * * *
@@ -106,9 +106,10 @@ This procedure Create a Service Desk Request
 ### Create a JSD ticket and attach a file
 
 * Create a pipeline task
-* Set the file path parameter
+![Task step 1](htdocs/images/createJsdTicketWithFileStep1.png)
 
-![Example Task](htdocs/images/createJsdTicketWithFile.png)
+* Set the file path parameter
+![Task step 2](htdocs/images/createJsdTicketWithFileStep2.png)
 
 
 
